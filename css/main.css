@@ -1,0 +1,13 @@
+svg .strategy {
+    stroke-width: 1;
+    stroke: #000;
+
+    -webkit-transition: stroke 0.5s, stroke-width 0.5s;
+    -o-transition: stroke 0.5s, stroke-width 0.5s;
+    transition: stroke 0.5s, stroke-width 0.5s;
+}
+svg .strategy:hover , .strategy.active {
+    cursor: pointer;
+    stroke-width: 4;
+    stroke: #000;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>STRATEGY MAP</title>
+</head>
+
+<body ng-app="StrategyMapApp" ng-controller="MainCtrl as $ctrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+    </script>
+
+    <div class="jumbotron">
+        <h1 class="display-3">STRATEGY MAP</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div svg-map></div>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Color</th>
+        </tr>
+        <tr ng-repeat="so in SOLists">
+            <td>{{ so.id }}</td>
+            <td>{{ so.color }}</td>
+        </tr>
+    </table>
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/controllers.js"></script>
+    <script src="./js/directives.js"></script>
+    <script src="./js/filters.js"></script>
+</body>
+
+</html>
+
+<!-- TODO Koneksi dengan backend using JSON -->
+<!-- TODO Membuat auto filter untuk warna, berdasarkan angka yang dikirim backend -->
